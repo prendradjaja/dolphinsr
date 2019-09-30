@@ -259,7 +259,7 @@ var toConsumableArray = function (arr) {
   }
 };
 
-var debug$1 = require('debug')('dolphin');
+// var debug$1 = require('debug')('dolphin');
 
 // -- applyToLearningCardState(...)
 
@@ -321,11 +321,11 @@ function calculateDaysLate(state, actual) {
   var daysLate = dateDiffInDays(actual, expected);
 
   if (daysLate < 0) {
-    debug$1('last review occured earlier than expected', {
-      daysLate: daysLate,
-      actual: actual,
-      expected: expected
-    });
+    // debug$1('last review occured earlier than expected', {
+    //   daysLate: daysLate,
+    //   actual: actual,
+    //   expected: expected
+    // });
     return 0;
   }
 
@@ -430,7 +430,7 @@ function applyReview(prev, review) {
   return state;
 }
 
-var debug = require('debug')('dolphin');
+// var debug = require('debug')('dolphin');
 
 var DolphinSR = function () {
 
@@ -529,7 +529,7 @@ var DolphinSR = function () {
   }, {
     key: '_rebuild',
     value: function _rebuild() {
-      debug('rebuilding state');
+      // debug('rebuilding state');
       var masters = this._masters;
       var reviews = this._reviews;
       this._masters = {};
