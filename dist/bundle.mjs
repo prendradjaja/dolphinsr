@@ -289,7 +289,7 @@ function applyToLearningCardState(prev, ts, rating) {
       consecutiveCorrect: 0,
       lastReviewed: ts
     };
-  } else if (rating.match(/^good|hard$/) && prev.consecutiveCorrect < 1) {
+  } else if (rating.match(/^good|hard$/)) {
     return {
       master: prev.master,
       combination: prev.combination,
